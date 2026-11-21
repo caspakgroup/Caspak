@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caspak Group of Companies</title>
+<meta name="description" content="Caspak is a group of companies in hospitality, travel, food and business services, connecting people, places and trade.">
+<meta name="theme-color" content="#0B2A4A">
+<meta property="og:title" content="Caspak Group of Companies">
+<meta property="og:description" content="Many businesses. One trusted name.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B2A4A%22/><path d=%22M50 16 66 50 50 84 34 50Z%22 fill=%22%23C9A24B%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--N:#0B2A4A;--G:#0A6B3A;--B:#1F6FB2;--A:#C9A24B;
+--bg:#F7F9FB;--bg2:#EAF0F5;--ink:#0B2A4A;--mute:#4D6275;--line:rgba(11,42,74,.16);--field:#fff;--blue-t:#1F6FB2;--green-t:#0A6B3A;
+--sans:Montserrat,'Trebuchet MS',Verdana,sans-serif;--serif:Georgia,'Times New Roman',serif;
+color-scheme:light;box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root{--bg:#0A1620;--bg2:#0F1F2E;--ink:#E8EFF6;--mute:#9AAEC0;--line:rgba(232,239,246,.18);--field:#12263A;--blue-t:#6FB0F0;--green-t:#4FCB8B;color-scheme:dark}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--A);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+
+/* navigation */
+.nav{position:sticky;top:0;z-index:20;background:var(--N);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.lock{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.lock svg{width:56px;height:auto}
+.lock b{display:block;font:800 21px/1 var(--sans);letter-spacing:.12em}
+.lock i{display:block;font:600 7.5px/1 var(--sans);font-style:normal;letter-spacing:.28em;margin-top:6px;opacity:.85}
+.links{display:flex;align-items:center;gap:28px;font:600 14px var(--sans)}
+.links a{text-decoration:none;opacity:.88}
+.links a:hover{opacity:1;color:var(--A)}
+.links .pill{background:var(--A);color:var(--N);padding:10px 20px;border-radius:999px;opacity:1;font-weight:800}
+.links .pill:hover{color:var(--N);background:#d8b565}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--N);color:#fff;text-align:center;padding:clamp(28px,6vh,64px) 0 clamp(64px,11vh,120px)}
+.hero::before,.hero::after{content:"";position:absolute;width:560px;height:560px;border-radius:50%;filter:blur(90px);opacity:.4;pointer-events:none}
+.hero::before{left:-220px;bottom:-260px;background:var(--G)}
+.hero::after{right:-220px;bottom:-260px;background:var(--B)}
+.hero .wrap{position:relative;z-index:1}
+.route{width:min(780px,100%);height:auto;display:block;margin:0 auto}
+.route .dots{stroke-dasharray:1 13}
+.route .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.5,0,.2,1) .3s forwards}
+.route .star{transform-origin:320px 76px;transform:scale(0);animation:pop .7s cubic-bezier(.3,1.5,.5,1) 2.5s forwards}
+.route .ring{transform-origin:center;transform-box:fill-box;animation:ring 1.4s ease-out 2.6s 1}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{transform:scale(1)}}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(2.2);opacity:0}}
+h1{font:800 clamp(2.2rem,5.4vw,4.2rem)/1.08 var(--sans);letter-spacing:-.01em;margin:6px auto 0;max-width:15em}
+.lead{max-width:36em;margin:22px auto 34px;color:#C5D3E0;font-size:1.15rem}
+.btn{display:inline-block;background:var(--A);color:var(--N);padding:15px 32px;border-radius:999px;border:0;font:800 15px var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{background:#d8b565;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4);margin-left:12px}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.tri{height:8px;background:linear-gradient(90deg,var(--G) 33.3%,var(--A) 33.3% 66.6%,var(--B) 66.6%)}
+
+/* shared section type */
+section{padding:clamp(64px,11vh,120px) 0}
+h2{font:800 clamp(1.8rem,3.6vw,2.7rem)/1.15 var(--sans);margin:0 0 .5em;letter-spacing:-.01em}
+.sub{color:var(--mute);max-width:38em;margin:0}
+
+/* about */
+.about{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.big{font-size:clamp(1.35rem,2.3vw,1.8rem);line-height:1.5;margin:0}
+.vals{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.vals li{padding:20px 0;border-bottom:1px solid var(--line)}
+.vals b{display:block;font:800 1.05rem var(--sans);margin-bottom:2px}
+.vals span{color:var(--mute);font-size:.98rem}
+
+/* leadership */
+#team{padding-top:0}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 48px;margin-top:32px;border-top:2px solid var(--ink)}
+.person{padding:26px 0;border-bottom:1px solid var(--line)}
+.person h3{margin:0;font:800 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--sans)}
+.person p{margin:4px 0 0;font:600 .95rem var(--sans);color:var(--green-t)}
+
+/* companies */
+.cos{background:var(--bg2)}
+.rows{list-style:none;margin:44px 0 0;padding:0;border-top:2px solid var(--ink)}
+.rows li{display:grid;grid-template-columns:72px 1fr 1.3fr;gap:24px;align-items:center;padding:30px 12px;border-bottom:1px solid var(--line);transition:background .25s}
+.rows li:hover{background:color-mix(in srgb,var(--c) 9%,transparent)}
+.rows svg{width:44px;height:44px;fill:none;stroke:var(--c);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.rows h3{margin:0;font:800 clamp(1.3rem,2.4vw,1.75rem)/1.2 var(--sans)}
+.rows p{margin:0;color:var(--mute)}
+.rows .soon{opacity:.75}
+
+/* services band */
+.svc{background:var(--N);color:#fff}
+.svc .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,88px);align-items:start}
+.svc .sub{color:#B9C9D8;margin-bottom:30px}
+.svc dl{margin:0;border-top:1px solid rgba(255,255,255,.22)}
+.svc dt{font:800 1.2rem var(--sans);padding-top:22px}
+.svc dd{margin:4px 0 0;padding-bottom:22px;color:#B9C9D8;border-bottom:1px solid rgba(255,255,255,.22)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.mail{display:inline-block;margin-top:18px;font:800 clamp(1.05rem,2.2vw,1.35rem) var(--sans);text-decoration:none;color:var(--blue-t);border-bottom:3px solid var(--A);padding-bottom:3px;word-break:break-all}
+form{display:grid;gap:14px}
+label{font:600 13px var(--sans);display:grid;gap:6px}
+input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);font:16px var(--serif)}
+textarea{resize:vertical}
+form .btn{justify-self:start;margin-top:6px}
+
+footer{background:var(--N);color:#B9C9D8;font:500 13px var(--sans)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:30px 0}
+footer .lock svg{width:44px}footer .lock b{font-size:16px}footer .lock i{display:none}
+
+@media (max-width:860px){
+.about,.svc .grid,.contact{grid-template-columns:1fr}
+.rows li{grid-template-columns:56px 1fr;gap:6px 18px;padding:24px 4px}
+.rows p{grid-column:2}
+.links a:not(.pill){display:none}
+.btn.ghost{margin:12px 0 0}
+}
+@media (prefers-reduced-motion:reduce){
+.route .draw{animation:none;stroke-dashoffset:0}
+.route .star{animation:none;transform:scale(1)}
+.route .ring{animation:none;opacity:0}
+html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="lock" href="#top" aria-label="Caspak Group of Companies, home">
+      <svg viewBox="0 0 120 80" aria-hidden="true"><use href="#mark"/></svg>
+      <span><b>CASPAK</b><i>GROUP OF COMPANIES</i></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#companies">Companies</a>
+      <a href="#services">Business services</a>
+      <a class="pill" href="#contact">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <svg class="route" viewBox="0 0 640 300" role="img" aria-label="Two points joined by a dotted route with a gold star at the top">
+        <defs>
+          <mask id="reveal"><path class="draw" pathLength="1" d="M70 262 Q320 -110 570 262" stroke="#fff" stroke-width="40" fill="none"/></mask>
+        </defs>
+        <g class="rings" fill="none" stroke-width="2">
+          <circle class="ring" cx="70" cy="262" r="20" stroke="#4FCB8B"/>
+          <circle class="ring" cx="570" cy="262" r="20" stroke="#6FB0F0"/>
+        </g>
+        <circle cx="70" cy="262" r="30" fill="#0A6B3A" opacity=".28"/>
+        <circle cx="570" cy="262" r="30" fill="#1F6FB2" opacity=".28"/>
+        <circle cx="70" cy="262" r="15" fill="#0A6B3A"/>
+        <circle cx="570" cy="262" r="15" fill="#1F6FB2"/>
+        <path class="dots" mask="url(#reveal)" d="M70 262 Q320 -110 570 262" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <g class="star">
+          <rect x="298" y="54" width="44" height="44" fill="#C9A24B"/>
+          <rect x="298" y="54" width="44" height="44" fill="#C9A24B" transform="rotate(45 320 76)"/>
+          <circle cx="320" cy="76" r="8" fill="#0B2A4A"/>
+        </g>
+      </svg>
+      <h1>Many businesses. One trusted name.</h1>
+      <p class="lead">Caspak brings together companies in hospitality, travel, food and business services, connecting people, places and trade between Azerbaijan, Pakistan and beyond.</p>
+      <a class="btn" href="#companies">Meet our companies</a><a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="tri" aria-hidden="true"></div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>Built on partnership</h2>
+        <p class="big">Look at our logo. Two points, one route between them, and a gold star where they meet. That is how every Caspak company works: we bring people together, and we stay with them after the first handshake.</p>
+      </div>
+      <ul class="vals">
+        <li><b>Honest service</b><span>We say what we will do, then do it.</span></li>
+        <li><b>Attention to detail</b><span>The small things decide whether a stay, a trip or a business goes well.</span></li>
+        <li><b>Lasting relationships</b><span>Our customers and partners come back, and that is how we measure ourselves.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <h2>Leadership</h2>
+      <div class="people">
+        <div class="person"><h3>Mirza Haroon Baig</h3><p>CEO</p></div>
+        <div class="person"><h3>Hussnain Asif Ch</h3><p>COO and Director</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="companies" class="cos">
+    <div class="wrap">
+      <h2>Our companies</h2>
+      <p class="sub">Four businesses today, with more on the way. Each one carries the Caspak name and the same standard of care.</p>
+      <ul class="rows">
+        <li style="--c:var(--green-t)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5.5A1.5 1.5 0 0 1 5.5 4h8A1.5 1.5 0 0 1 15 5.5V21M15 10h3.5A1.5 1.5 0 0 1 20 11.5V21M2.5 21h19M8 8h3M8 12h3M8 16h3"/></svg>
+          <h3>Caspak Hotels</h3>
+          <p>Comfortable, welcoming stays for business and leisure guests.</p>
+        </li>
+        <li style="--c:var(--blue-t)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          <h3>Caspak Travel</h3>
+          <p>Trips, tours and bookings planned from start to finish, so you can just go.</p>
+        </li>
+        <li style="--c:var(--A)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Zm0 0v7"/></svg>
+          <h3>Caspak Foods</h3>
+          <p>Fresh, quality food and dining experiences people come back for.</p>
+        </li>
+        <li style="--c:#C8102E">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <h3>Caspak Business Services</h3>
+          <p>Company formation and business setup support, so you can start with confidence.</p>
+        </li>
+        <li class="soon" style="--c:var(--mute)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <h3>More to come</h3>
+          <p>New Caspak companies are always in the making.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services" class="svc">
+    <div class="wrap grid">
+      <div>
+        <h2>Start your company with Caspak</h2>
+        <p class="sub">Planning to start a business or grow into a new market? Caspak Business Services helps you set up properly and get moving.</p>
+        <a class="btn" href="#contact">Ask about company formation</a>
+      </div>
+      <dl>
+        <dt>Company formation</dt>
+        <dd>We help you set up a new company from start to finish.</dd>
+        <dt>Registration and licensing</dt>
+        <dd>Guidance through the paperwork and approvals your business needs.</dd>
+        <dt>Business setup support</dt>
+        <dd>Practical help to get you operating once your company is formed.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Let's talk</h2>
+        <p class="sub">A booking, a partnership or a new company: tell us what you need and we will reply by email.</p>
+        <a class="mail" href="mailto:caspakgroup@gmail.com">caspakgroup@gmail.com</a>
+      </div>
+      <form id="form">
+        <label>Your name<input id="name" autocomplete="name" required></label>
+        <label>Your email<input id="email" type="email" autocomplete="email" required></label>
+        <label>What is this about?
+          <select id="topic">
+            <option>General enquiry</option>
+            <option>Company formation</option>
+            <option>Caspak Hotels</option>
+            <option>Caspak Travel</option>
+            <option>Caspak Foods</option>
+          </select>
+        </label>
+        <label>Message<textarea id="msg" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="tri" aria-hidden="true"></div>
+  <div class="wrap">
+    <a class="lock" href="#top" aria-label="Back to top"><svg viewBox="0 0 120 80" aria-hidden="true"><use href="#mark"/></svg><span><b>CASPAK</b></span></a>
+    <span>© <span id="yr"></span> Caspak Group of Companies. All rights reserved.</span>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mark" viewBox="0 0 120 80"><circle cx="20" cy="62" r="14" fill="#0A6B3A" opacity=".35"/><circle cx="100" cy="62" r="14" fill="#1F6FB2" opacity=".35"/><circle cx="20" cy="62" r="8" fill="#0A6B3A"/><circle cx="100" cy="62" r="8" fill="#1F6FB2"/><path d="M20 62Q60-18 100 62" stroke="#fff" stroke-width="4" fill="none" stroke-dasharray="1 8" stroke-linecap="round"/><rect x="51" y="13" width="18" height="18" fill="#C9A24B"/><rect x="51" y="13" width="18" height="18" fill="#C9A24B" transform="rotate(45 60 22)"/><circle cx="60" cy="22" r="4" fill="#0B2A4A"/></symbol>
+</defs></svg>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var v = function (id) { return document.getElementById(id).value; };
+  var subject = encodeURIComponent('Website enquiry: ' + v('topic'));
+  var body = encodeURIComponent('Name: ' + v('name') + '\nEmail: ' + v('email') + '\n\n' + v('msg'));
+  window.location.href = 'mailto:caspakgroup@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+</body>
+</html>
